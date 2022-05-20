@@ -1,6 +1,9 @@
 # @schiacciata/logger
 A simple node.js logger made in TypeScript 🎨
 
+## Notice
+This is the Node.js version, if you need it for the web go check out the other branch
+
 ## Table Of Contents
   - [Installation](#installation)
   - [Example](#example)
