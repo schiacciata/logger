@@ -77,11 +77,11 @@ class Logger {
             if (data && date) {
                 console.log(`%c[%c${options.symbol}%c] [%c${options.txt}%c] [${new Date().toLocaleString()}] %c${args}`, this.#font, this.#color(options.color), this.#font, this.#color(options.color), this.#font, '');
             } else if (data && !date) {
-                console.log(`%c[[%c${options.symbol}%c] [%c${options.txt}%c] %c${args}`, this.#font, this.#color(options.color), this.#font, this.#color(options.color), this.#font, '');
+                console.log(`%c[%c${options.symbol}%c] [%c${options.txt}%c] %c${args}`, this.#font, this.#color(options.color), this.#font, this.#color(options.color), this.#font, '');
             } else if (!data && date) {
-                console.log(`%c[[%c${options.symbol}%c] [${new Date().toLocaleString()}] %c${args}`, this.#font, this.#color(options.color), this.#font, '');
+                console.log(`%c[%c${options.symbol}%c] [${new Date().toLocaleString()}] %c${args}`, this.#font, this.#color(options.color), this.#font, '');
             } else {
-                console.log(`%c[[%c${options.symbol}%c] %c${args}`, this.#font, this.#color(options.color), this.#font, '');
+                console.log(`%c[%c${options.symbol}%c] %c${args}`, this.#font, this.#color(options.color), this.#font, '');
             };
         } else {
             if (data && date) {
