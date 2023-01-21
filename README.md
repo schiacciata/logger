@@ -11,7 +11,7 @@ This is the Node.js version, if you need it for the web go check out the other b
 ## Installation
 
 ```sh
-    npm install @schiacciata/logger
+    npm install schiacciata/logger
 ```
 
 ## Example
