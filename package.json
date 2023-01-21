@@ -6,13 +6,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx tsc"
-  },
-  "files": [
-    "dist"
-  ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "build": "npx tsc",
+    "postinstall": "npm run build"
   },
   "keywords": [],
   "author": "",
