@@ -6,7 +6,7 @@ const { text, style } = Colors;
 class Logger {
     options: constructorOptions;
     constructor(options: constructorOptions = {
-        symbols: true,
+        symbols: false,
         text: true,
         date: true,
         isEnabled: true,
@@ -67,14 +67,13 @@ class Logger {
         txt: '',
         color: text.white
     }, ...args: any[]): void {
-        if (!this.options.isEnabled) return;
         const { symbols, text: data, date } = this.options;
+        const parts: string[] = [];
 
-        var string: string = '';
-        if (symbols) string += `${options.color}${options.symbol}${style.reset}`;
-        if (data) string += ` [${options.color}${options.txt.toUpperCase()}${style.reset}]`;
-        if (date) string += ` [${text.white}${new Date().toLocaleString()}${style.reset}]`;
-        return console.log(string, ...args)
+        if (symbols) parts.push(`${options.color}${options.symbol}${style.reset}`);
+        if (data) parts.push(`[${options.color}${options.txt.toUpperCase()}${style.reset}]`);
+        if (date) parts.push(`[${text.white}${new Date().toLocaleString()}${style.reset}]`);
+        return console.log(...parts, ...args)
     };
 };
 
