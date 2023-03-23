@@ -8,7 +8,8 @@ class Logger {
     constructor(options: constructorOptions = {
         symbols: true,
         text: true,
-        date: true
+        date: true,
+        isEnabled: true,
     }) {
         this.options = options;
     };
@@ -66,6 +67,7 @@ class Logger {
         txt: '',
         color: text.white
     }, ...args: any[]): void {
+        if (!this.options.isEnabled) return;
         const { symbols, text: data, date } = this.options;
 
         var string: string = '';
