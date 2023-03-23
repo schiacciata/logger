@@ -2,6 +2,7 @@ interface constructorOptions {
     symbols?: boolean;
     text?: boolean;
     date?: boolean;
+    isEnabled?: boolean;
 };
 
 interface printOptions {
@@ -10,7 +11,7 @@ interface printOptions {
     color: string;
 };
 
-export {
+export type {
     constructorOptions,
     printOptions
 };
