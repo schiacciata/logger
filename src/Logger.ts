@@ -67,6 +67,7 @@ class Logger {
         txt: '',
         color: text.white
     }, ...args: any[]): void {
+        if (!this.options.isEnabled) return;
         const { symbols, text: data, date } = this.options;
         const parts: string[] = [];
 
