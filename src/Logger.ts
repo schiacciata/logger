@@ -5,13 +5,11 @@ const { text, style } = Colors;
 
 class Logger {
     options: constructorOptions;
-    constructor(options: constructorOptions = {
-        symbols: false,
-        text: true,
-        date: true,
-        isEnabled: true,
-    }) {
-        this.options = options;
+    constructor(options: constructorOptions) {
+        this.options.symbols = options.symbols || true;
+        this.options.text = options.text || true;
+        this.options.date = options.date || true;
+        this.options.isEnabled = options.isEnabled || true;
     };
 
     public log(...str: any[]): void {
